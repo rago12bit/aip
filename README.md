@@ -228,14 +228,14 @@ accuracy.
 
 Course project for **Artificial Intelligence**, B.Tech Information Technology, 2026–27.
 
-| Member | Role |
+| Member | Roll number |
 |---|---|
-| Raghav Gupta | [role] |
-| [Member 2] | [role] |
-| [Member 3] | [role] |
-| [Member 4] | [role] |
-| [Member 5] | [role] |
-| [Member 6] | [role] |
+| Raghav Gupta | 2024UIT3078 |
+| Pratikshit | 2024UIT3004 |
+| Siddharth Bhakta | 2024UIT3075 |
+| Vansh Tibrewal | 2024UIT3019 |
+| Farhat Khan | 2024UIT3068 |
+| Himesh Meena | 2024UIT3077 |
 
 ## References
 
