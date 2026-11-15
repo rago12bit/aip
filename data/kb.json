@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "name": "MedRule illustrative knowledge base",
+    "version": "1.0",
+    "note": "Educational rules written for a classroom project. Not clinically validated. Review every rule against a trusted medical source before any real use."
+  },
+
+  "symptoms": {
+    "fever":              {"label": "Fever",                              "group": "General",        "scale": "fever", "ask": "Do you have a fever?"},
+    "high_fever":         {"label": "High fever (102 F / 39 C or more)",  "group": "General",        "scale": "fever", "ask": "Is your fever high (102 F / 39 C or more)?"},
+    "chills":             {"label": "Chills or shivering",                "group": "General",        "ask": "Are you having chills or shivering?"},
+    "fatigue":            {"label": "Unusual tiredness",                  "group": "General",        "ask": "Do you feel unusually tired?"},
+    "body_aches":         {"label": "Body aches",                         "group": "General",        "scale": "pain",  "ask": "Do you have body aches?"},
+    "rash":               {"label": "Skin rash",                          "group": "General",        "ask": "Do you have a new skin rash?"},
+    "confusion":          {"label": "Confusion or hard to stay awake",    "group": "General",        "ask": "Are you confused or very hard to wake?"},
+
+    "cough":              {"label": "Cough",                              "group": "Respiratory",    "ask": "Do you have a cough?"},
+    "sore_throat":        {"label": "Sore throat",                        "group": "Respiratory",    "scale": "pain",  "ask": "Do you have a sore throat?"},
+    "runny_nose":         {"label": "Runny nose",                         "group": "Respiratory",    "ask": "Do you have a runny nose?"},
+    "nasal_congestion":   {"label": "Blocked nose",                       "group": "Respiratory",    "ask": "Is your nose blocked?"},
+    "sneezing":           {"label": "Frequent sneezing",                  "group": "Respiratory",    "ask": "Are you sneezing a lot?"},
+    "itchy_eyes":         {"label": "Itchy or watery eyes",               "group": "Respiratory",    "ask": "Are your eyes itchy or watery?"},
+    "shortness_of_breath":{"label": "Shortness of breath",                "group": "Respiratory",    "ask": "Are you short of breath?"},
+    "chest_pain":         {"label": "Chest pain",                         "group": "Respiratory",    "scale": "pain",  "ask": "Do you have chest pain?"},
+    "loss_of_smell_taste":{"label": "Loss of smell or taste",             "group": "Respiratory",    "ask": "Have you lost your sense of smell or taste?"},
+    "difficulty_swallowing":{"label": "Painful or difficult swallowing",  "group": "Respiratory",    "ask": "Is swallowing painful or difficult?"},
+    "swollen_glands":     {"label": "Swollen neck glands",                "group": "Respiratory",    "ask": "Are the glands in your neck swollen?"},
+
+    "nausea":             {"label": "Nausea",                             "group": "Digestive",      "ask": "Do you feel nauseous?"},
+    "vomiting":           {"label": "Vomiting",                           "group": "Digestive",      "ask": "Have you been vomiting?"},
+    "diarrhea":           {"label": "Diarrhea",                           "group": "Digestive",      "ask": "Do you have diarrhea?"},
+    "abdominal_pain":     {"label": "Stomach or lower belly pain",        "group": "Digestive",      "scale": "pain",  "ask": "Do you have stomach or lower belly pain?"},
+
+    "headache":           {"label": "Headache",                           "group": "Head and nerves","scale": "pain",  "ask": "Do you have a headache?"},
+    "light_sensitivity":  {"label": "Sensitivity to light",               "group": "Head and nerves","ask": "Does bright light bother you?"},
+    "visual_aura":        {"label": "Visual disturbance before headache", "group": "Head and nerves","ask": "Did you see flashing lights or zigzags before the headache?"},
+    "stiff_neck":         {"label": "Stiff neck",                         "group": "Head and nerves","ask": "Is your neck stiff, so that bending it forward hurts?"},
+    "pain_behind_eyes":   {"label": "Pain behind the eyes",               "group": "Head and nerves","scale": "pain",  "ask": "Do you have pain behind your eyes?"},
+    "joint_pain":         {"label": "Joint pain",                         "group": "Head and nerves","scale": "pain",  "ask": "Do you have joint pain?"},
+
+    "burning_urination":  {"label": "Burning when passing urine",         "group": "Urinary",        "ask": "Does it burn when you pass urine?"},
+    "frequent_urination": {"label": "Passing urine very often",           "group": "Urinary",        "ask": "Are you passing urine much more often than usual?"},
+    "cloudy_urine":       {"label": "Cloudy or smelly urine",             "group": "Urinary",        "ask": "Is your urine cloudy or foul-smelling?"}
+  },
+
+  "diseases": {
+    "common_cold": {
+      "label": "Common cold", "category": "Respiratory (viral)", "urgency": 0,
+      "advice": ["Rest and drink plenty of fluids.", "Symptoms usually ease within about a week."],
+      "see_doctor_if": "A high temperature lasts more than 3 days, symptoms get worse or do not improve after 10 days, or you feel short of breath or have chest pain."
+    },
+    "influenza": {
+      "label": "Influenza (flu)", "category": "Respiratory (viral)", "urgency": 0,
+      "advice": ["Rest, stay hydrated and avoid close contact with others.", "Monitor your temperature."],
+      "see_doctor_if": "You feel very unwell or short of breath, symptoms have not improved after 7 days, or you are 65 or over, pregnant or have a long-term condition. Call emergency services for sudden chest pain, severe breathing difficulty or coughing up blood."
+    },
+    "covid19": {
+      "label": "COVID-19 (suspected)", "category": "Respiratory (viral)", "urgency": 1,
+      "advice": ["Consider getting tested and limit contact with others.", "Rest and stay hydrated."],
+      "see_doctor_if": "You are short of breath, have chest pain, a fever lasting 5 or more days, or symptoms that are getting worse. Call emergency services if you are too breathless to speak in short sentences."
+    },
+    "allergic_rhinitis": {
+      "label": "Allergic rhinitis (hay fever)", "category": "Allergy", "urgency": 0,
+      "advice": ["Avoid known triggers such as dust or pollen.", "Keep windows closed on high-pollen days."],
+      "see_doctor_if": "Symptoms get worse or do not improve with pharmacy treatment."
+    },
+    "strep_throat": {
+      "label": "Strep throat (suspected)", "category": "Throat infection (bacterial)", "urgency": 1,
+      "advice": ["A throat swab test is needed to confirm this.", "Rest and drink warm fluids."],
+      "see_doctor_if": "The sore throat has not improved after a week, the temperature is very high, you show signs of dehydration, or the patient is under 5. Go to emergency care if you cannot swallow, are drooling or have trouble breathing."
+    },
+    "gastroenteritis": {
+      "label": "Gastroenteritis (stomach bug)", "category": "Digestive", "urgency": 0,
+      "advice": ["Sip oral rehydration fluids often.", "Eat light food once vomiting settles."],
+      "see_doctor_if": "You cannot keep fluids down, vomiting lasts more than 2 days or diarrhoea more than 7 days, you show signs of dehydration, or you see blood. Go to emergency care for blood in vomit, a stiff neck, or sudden severe stomach pain or headache."
+    },
+    "migraine": {
+      "label": "Migraine", "category": "Neurological", "urgency": 0,
+      "advice": ["Rest in a dark, quiet room.", "Note possible triggers such as missed meals or poor sleep."],
+      "see_doctor_if": "An attack lasts more than 72 hours, the aura lasts more than an hour, or you are pregnant. Go to emergency care for a sudden, extremely painful headache, speech, memory or vision problems, confusion, weakness, or a high temperature with a stiff neck."
+    },
+    "dengue": {
+      "label": "Dengue fever (suspected)", "category": "Mosquito-borne infection", "urgency": 1,
+      "advice": ["Get a blood test for confirmation.", "Rest, drink plenty of fluids and avoid mosquito bites."],
+      "see_doctor_if": "You have severe stomach pain, repeated vomiting, fast breathing, bleeding gums or nose, blood in vomit or stool, or feel extremely weak or restless."
+    },
+    "uti": {
+      "label": "Urinary tract infection", "category": "Urinary", "urgency": 1,
+      "advice": ["Drink plenty of water.", "A urine test is the usual way to confirm this."],
+      "see_doctor_if": "You have a fever or shivering, back or lower-belly pain, or blood in the urine, symptoms do not improve within 48 hours, or you are a man, pregnant, or 65 or over."
+    },
+    "pneumonia": {
+      "label": "Pneumonia (suspected)", "category": "Lower respiratory infection", "urgency": 1,
+      "advice": ["See a doctor promptly: a chest examination or X-ray is usually needed.", "Rest and stay hydrated."],
+      "see_doctor_if": "You feel short of breath, have chest pain, or cough up yellow or green phlegm. Seek emergency care if you are struggling to breathe, your lips look blue, or you cough up blood or become confused."
+    }
+  },
+
+  "rules": [
+    {"id": "S1", "if_any": ["cough", "sore_throat", "runny_nose", "nasal_congestion", "sneezing"], "then": "syndrome:respiratory", "cf": 1.0, "why": "at least one upper-airway symptom"},
+    {"id": "S2", "if": ["fever"], "if_any": ["chills", "body_aches", "fatigue"], "then": "syndrome:systemic", "cf": 1.0, "why": "fever together with whole-body symptoms"},
+    {"id": "S3", "if_any": ["nausea", "vomiting", "diarrhea", "abdominal_pain"], "then": "syndrome:digestive", "cf": 1.0, "why": "at least one digestive symptom"},
+    {"id": "S4", "if_any": ["headache", "light_sensitivity", "visual_aura"], "then": "syndrome:neurological", "cf": 1.0, "why": "at least one head or nerve symptom"},
+    {"id": "S5", "if_any": ["burning_urination", "frequent_urination", "cloudy_urine"], "then": "syndrome:urinary", "cf": 1.0, "why": "at least one urinary symptom"},
+
+    {"id": "C1", "if": ["syndrome:respiratory"], "then": "disease:common_cold", "cf": 0.30, "why": "upper-airway symptoms are present"},
+    {"id": "C2", "if": ["runny_nose", "sneezing"], "then": "disease:common_cold", "cf": 0.40, "why": "runny nose with sneezing is typical of a cold"},
+    {"id": "C3", "if": ["nasal_congestion", "sore_throat"], "then": "disease:common_cold", "cf": 0.30, "why": "blocked nose with sore throat"},
+    {"id": "C4", "if": ["cough"], "then": "disease:common_cold", "cf": 0.15, "why": "cough is common in colds"},
+    {"id": "C5", "if": ["high_fever"], "then": "disease:common_cold", "cf": -0.50, "why": "high fever is unusual for a simple cold"},
+    {"id": "C6", "if": ["shortness_of_breath"], "then": "disease:common_cold", "cf": -0.40, "why": "breathlessness is not a normal part of a cold"},
+    {"id": "C7", "if": ["chest_pain"], "then": "disease:common_cold", "cf": -0.30, "why": "chest pain is not a normal part of a cold"},
+
+    {"id": "I1", "if": ["syndrome:respiratory", "syndrome:systemic"], "then": "disease:influenza", "cf": 0.40, "why": "airway symptoms together with fever and body-wide symptoms"},
+    {"id": "I2", "if": ["high_fever", "body_aches"], "then": "disease:influenza", "cf": 0.50, "why": "sudden high fever with body aches"},
+    {"id": "I3", "if": ["chills", "fatigue"], "then": "disease:influenza", "cf": 0.30, "why": "chills with marked tiredness"},
+    {"id": "I4", "if": ["fever", "cough"], "then": "disease:influenza", "cf": 0.25, "why": "fever with cough"},
+    {"id": "I5", "if": ["headache", "body_aches"], "then": "disease:influenza", "cf": 0.20, "why": "headache with body aches"},
+
+    {"id": "V1", "if": ["loss_of_smell_taste"], "then": "disease:covid19", "cf": 0.60, "why": "loss of smell or taste is a distinctive sign"},
+    {"id": "V2", "if": ["fever", "cough"], "then": "disease:covid19", "cf": 0.30, "why": "fever with cough"},
+    {"id": "V3", "if": ["shortness_of_breath", "cough"], "then": "disease:covid19", "cf": 0.30, "why": "cough with breathlessness"},
+    {"id": "V4", "if": ["fatigue", "body_aches"], "then": "disease:covid19", "cf": 0.15, "why": "tiredness with body aches"},
+    {"id": "V5", "if": ["sore_throat", "headache"], "then": "disease:covid19", "cf": 0.15, "why": "sore throat with headache"},
+
+    {"id": "A1", "if": ["sneezing", "itchy_eyes"], "then": "disease:allergic_rhinitis", "cf": 0.55, "why": "sneezing with itchy eyes points to allergy"},
+    {"id": "A2", "if": ["runny_nose", "nasal_congestion"], "then": "disease:allergic_rhinitis", "cf": 0.25, "why": "runny and blocked nose"},
+    {"id": "A3", "if": ["sneezing", "not:fever"], "then": "disease:allergic_rhinitis", "cf": 0.25, "why": "sneezing without fever"},
+    {"id": "A4", "if": ["fever"], "then": "disease:allergic_rhinitis", "cf": -0.60, "why": "allergy does not normally cause fever"},
+    {"id": "A5", "if": ["body_aches"], "then": "disease:allergic_rhinitis", "cf": -0.30, "why": "body aches are not typical of allergy"},
+
+    {"id": "T1", "if": ["sore_throat", "fever"], "then": "disease:strep_throat", "cf": 0.40, "why": "sore throat with fever"},
+    {"id": "T2", "if": ["swollen_glands", "sore_throat"], "then": "disease:strep_throat", "cf": 0.40, "why": "sore throat with swollen neck glands"},
+    {"id": "T3", "if": ["difficulty_swallowing"], "then": "disease:strep_throat", "cf": 0.30, "why": "painful swallowing"},
+    {"id": "T4", "if": ["sore_throat", "not:cough"], "then": "disease:strep_throat", "cf": 0.30, "why": "sore throat without cough"},
+    {"id": "T5", "if": ["cough", "runny_nose"], "then": "disease:strep_throat", "cf": -0.40, "why": "cough and runny nose suggest a viral cause instead"},
+
+    {"id": "G1", "if": ["vomiting", "diarrhea"], "then": "disease:gastroenteritis", "cf": 0.60, "why": "vomiting together with diarrhea"},
+    {"id": "G2", "if": ["nausea", "abdominal_pain"], "then": "disease:gastroenteritis", "cf": 0.30, "why": "nausea with stomach pain"},
+    {"id": "G3", "if": ["syndrome:digestive", "fever"], "then": "disease:gastroenteritis", "cf": 0.10, "why": "digestive symptoms with fever"},
+    {"id": "G4", "if": ["burning_urination"], "then": "disease:gastroenteritis", "cf": -0.30, "why": "urinary burning points elsewhere"},
+
+    {"id": "M1", "if": ["headache", "light_sensitivity"], "then": "disease:migraine", "cf": 0.50, "why": "headache with light sensitivity"},
+    {"id": "M2", "if": ["headache", "nausea"], "then": "disease:migraine", "cf": 0.30, "why": "headache with nausea"},
+    {"id": "M3", "if": ["visual_aura"], "then": "disease:migraine", "cf": 0.50, "why": "a visual aura before the headache"},
+    {"id": "M4", "if": ["fever"], "then": "disease:migraine", "cf": -0.50, "why": "fever is not part of a migraine"},
+
+    {"id": "D1", "if": ["high_fever", "pain_behind_eyes"], "then": "disease:dengue", "cf": 0.50, "why": "high fever with pain behind the eyes"},
+    {"id": "D2", "if": ["high_fever", "joint_pain"], "then": "disease:dengue", "cf": 0.40, "why": "high fever with joint pain"},
+    {"id": "D3", "if": ["rash", "fever"], "then": "disease:dengue", "cf": 0.30, "why": "rash with fever"},
+    {"id": "D4", "if": ["headache", "body_aches", "fever"], "then": "disease:dengue", "cf": 0.20, "why": "headache, body aches and fever together"},
+    {"id": "D5", "if": ["syndrome:respiratory"], "then": "disease:dengue", "cf": -0.30, "why": "cold-like symptoms are less typical of dengue"},
+
+    {"id": "U1", "if": ["burning_urination"], "then": "disease:uti", "cf": 0.55, "why": "burning when passing urine"},
+    {"id": "U2", "if": ["frequent_urination", "cloudy_urine"], "then": "disease:uti", "cf": 0.45, "why": "frequent, cloudy urine"},
+    {"id": "U3", "if": ["abdominal_pain", "syndrome:urinary"], "then": "disease:uti", "cf": 0.20, "why": "lower belly pain with urinary symptoms"},
+
+    {"id": "P1", "if": ["fever", "cough", "shortness_of_breath"], "then": "disease:pneumonia", "cf": 0.60, "why": "fever, cough and breathlessness together"},
+    {"id": "P2", "if": ["chest_pain", "cough"], "then": "disease:pneumonia", "cf": 0.35, "why": "chest pain with cough"},
+    {"id": "P3", "if": ["high_fever", "cough"], "then": "disease:pneumonia", "cf": 0.25, "why": "high fever with cough"},
+    {"id": "P4", "if": ["shortness_of_breath", "fatigue"], "then": "disease:pneumonia", "cf": 0.20, "why": "breathlessness with tiredness"},
+    {"id": "P5", "if": ["chest_pain", "shortness_of_breath"], "then": "disease:pneumonia", "cf": 0.30, "why": "chest pain together with breathlessness"}
+  ]
+}

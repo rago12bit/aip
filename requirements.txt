@@ -1,0 +1,6 @@
+# Runtime
+streamlit>=1.38
+pandas>=2.0
+
+# Tests only
+pytest>=8.0
